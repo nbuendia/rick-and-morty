@@ -10,7 +10,7 @@ import App from './App'
 
 const theme = createTheme({
     typography: {
-        fontFamily: 'Creepster'
+        fontFamily: 'Dongle'
     }
 });
 

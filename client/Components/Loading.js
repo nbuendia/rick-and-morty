@@ -6,8 +6,8 @@ import { Box, Typography } from "@mui/material";
 function Loading() {
   return (
     <Box className="loading-container">
-      <Typography fontSize={30} fontWeight={800} color={"black"}>
-        LOADING...
+      <Typography fontFamily={'Creepster'} fontSize={60} fontWeight={800} color={'whitesmoke'}>
+        LOADING. . .
       </Typography>
       <br />
       <iframe 
@@ -15,8 +15,8 @@ function Loading() {
         width="480"
         height="360"
         frameBorder="0"
-        allowFullScreen>
-      </iframe>
+        allowFullScreen 
+      />
     </Box>
   );
 }

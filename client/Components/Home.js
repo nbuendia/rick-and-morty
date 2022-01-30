@@ -3,28 +3,39 @@ import axios from "axios";
 
 //COMPONENTS
 import Loading from "./Loading";
-import RandomCharacter from "./RandomCharacter";
+import RandomCharacter from "./card/RandomCharacter";
 import Footer from "./Footer";
 
 
 function Home() {
     const [loading, setLoading] = useState(true);
     const [character, getCharacter] = useState(null);
+    const [episodes, getEpisodes] = useState(null);
     
-    const URL = 'https://rickandmortyapi.com/api';
+    const URL = 'https://rickandmortyapi.com/api/character';
 
     useEffect(() => {
-        axios.get(`${URL}/character`).then((res) => {
+        axios.get(`${URL}`).then((res) => {
             return res.data;
+
         }).then((res) => {
-            //URL/CHARACTER/NUMBER -- NUMBER IS RANDOMLY CHOSEN BETWEEN 0-TOTAL NUMBER OF CHARACTERS
-            axios.get(`${URL}/character/${Math.floor(Math.random() * res.info.count + 1)}`).then((res) => {
+            //CHOOSES A RANDOM NUMBER BETWEEN 0 AND TOTAL NUMBER OF CHARACTERS
+            let randomNum = Math.floor(Math.random() * res.info.count + 1);
+            axios.get(`${URL}/${randomNum}`).then((res) => {
                 getCharacter(res.data)
-                setTimeout(() => {
-                    setLoading(false);
-                }, 3000);
+                return res.data;
+
+            }).then((res) => {
+                axios.all(res.episode.map((episode) => axios.get(episode))).then((res) => {
+                    let episodeData = res.map(episode => episode.data);
+                    getEpisodes(episodeData);
+
+                    //ADDED TIMEOUT SO LOADING DOESNT LOOK LIKE A GLITCH
+                    setTimeout(() => {
+                        setLoading(false);
+                    }, 3000);
+                })
             })
-            // axios req episode to add to card
         })
         .catch((error) => {
             console.error('Oh No? Something Went Wrong!', error)
@@ -35,7 +46,7 @@ function Home() {
 
     return(
         <>
-            <RandomCharacter character={character} />
+            <RandomCharacter character={character} episodes={episodes} />
             <Footer />
         </>
     )

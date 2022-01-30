@@ -8,8 +8,6 @@ import CircleIcon from '@mui/icons-material/Circle';
 function NameAndStatus(props) {
     const { character } = props;
 
-    console.log(character.status);
-
     return(
         <>
             <Typography component='div' fontWeight={700} fontSize={65} color={'whiteSmoke'} textAlign={'center'}>

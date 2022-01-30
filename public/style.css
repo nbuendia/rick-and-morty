@@ -36,7 +36,6 @@ body {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .inner-card-content {
@@ -54,9 +53,20 @@ body {
   text-align: center;
 }
 
-.br {
+.block-display {
   display: block;
-  margin-bottom: -65px;
+}
+
+.line-spacing-5 {
+  line-height: 0.5;
+}
+
+.line-spacing-6 {
+  line-height: 0.6;
+}
+
+.line-margin {
+  margin-bottom: 10px;
 }
 
 .hr {

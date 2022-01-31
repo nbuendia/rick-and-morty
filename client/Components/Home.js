@@ -5,6 +5,8 @@ import axios from "axios";
 import Loading from "./Loading";
 import RandomCharacter from "./card/RandomCharacter";
 import Footer from "./Footer";
+import TitleBar from "./TitleBar";
+import { Container } from "@mui/material";
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -45,8 +47,11 @@ function Home() {
 
     return(
         <>
+            <Container style={{height: '250px'}} />
+            <TitleBar />
             <RandomCharacter character={character} episodes={episodes} />
             <Footer />
+            <Container style={{height: '250px'}} />
         </>
     )
 

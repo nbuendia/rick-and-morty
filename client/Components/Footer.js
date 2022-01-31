@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <Box className='footer'>
-      <Box style={{display: 'flex', alignItems: 'center'}}>
+      <Box className="inner-footer-box-1">
         <Typography fontSize={50} marginRight={'5px'}>
           Inspired by
         </Typography>
@@ -32,16 +32,19 @@ function Footer() {
         </a>
       </>
 
-      <Box>
+      <Box className="inner-footer-box-2">
         <Typography fontSize={30} style={{lineHeight: '1'}}>
           Find me!
         </Typography>
-        <a href="https://www.linkedin.com/in/nicole-buendia/" target='_blank' rel="noreferrer noopener">
-          <LinkedInIcon style={{color: '#0e76a8'}} />
-        </a>
-        <a href="https://github.com/nbuendia" target='_blank' rel="noreferrer noopener">
-          <GitHubIcon style={{color: 'black', marginLeft: '10px'}} />
-        </a>
+
+        <Box>
+          <a href="https://www.linkedin.com/in/nicole-buendia/" target='_blank' rel="noreferrer noopener">
+            <LinkedInIcon style={{color: '#0e76a8'}} />
+          </a>
+          <a href="https://github.com/nbuendia" target='_blank' rel="noreferrer noopener">
+            <GitHubIcon style={{color: 'black', marginLeft: '10px'}} />
+          </a>
+        </Box>
       </Box>
     </Box>
   );

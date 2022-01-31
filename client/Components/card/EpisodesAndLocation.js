@@ -18,11 +18,16 @@ function EpisodesAndLocation(props) {
         if (nameArr.length > 2) {
             let lastName = nameArr.pop();
             let lastDetail = detailArr.pop();
-            let last = ` & ${lastName}: ${lastDetail}`;
+            let length = nameArr.length > 5 ? 5 : nameArr.length;
+            let last = nameArr.length < 5 ? ` & ${lastName}: ${lastDetail}` : ` ${lastName}: ${lastDetail} & Many More!`;
 
-            for (let i = 0; i < nameArr.length; i++) {
+            //USED 5 TO AVOID A LONG LIST. EX. RICK WOULD BE FEATURED IN EVERY EPISODE
+            for (let i = 0; i < length; i++) {
                 featuredIn += `${nameArr[i]}: ${detailArr[i]}`;
-                if (i < nameArr.length - 1) featuredIn += ', ';
+
+                //IF CHARACTER HAS MORE THAN 5 EPISODES IT ADDS COMMA B/W ALL WORDS ELSE B/W ALL WORDS EXCEPT LAST TWO
+                if (i < length && nameArr.length > 5) featuredIn += ', ';
+                else if (i < length - 1) featuredIn += ', ';
             }
 
             return featuredIn + last;
@@ -40,9 +45,7 @@ function EpisodesAndLocation(props) {
                 <b>FEATURED IN: </b> {featuredInSentence}
             </span>
         </Typography>
-
     )
-
 }
 
 export default EpisodesAndLocation;

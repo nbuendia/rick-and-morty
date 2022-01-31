@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+//MUI
+import { Container } from "@mui/material";
+
 //COMPONENTS
 import Loading from "./Loading";
 import RandomCharacter from "./card/RandomCharacter";
 import Footer from "./Footer";
 import TitleBar from "./TitleBar";
-import { Container } from "@mui/material";
 
 function Home() {
     const [loading, setLoading] = useState(true);

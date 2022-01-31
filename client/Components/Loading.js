@@ -10,8 +10,8 @@ function Loading() {
         LOADING. . .
       </Typography>
       <br />
-      <iframe 
-        src="https://giphy.com/embed/n5GXsYKoe1F3eFcRgq"
+      <img 
+        src="https://media.giphy.com/media/n5GXsYKoe1F3eFcRgq/giphy.gif"
         width="480"
         height="360"
         frameBorder="0"

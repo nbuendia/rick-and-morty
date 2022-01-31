@@ -1,7 +1,7 @@
 import React from "react";
 
 //MUI
-import { Box, Card, CardContent, CardMedia } from "@mui/material";
+import { Box, Button, Card, CardContent, CardMedia } from "@mui/material";
 
 //COMPONENTS
 import EpisodesAndLocation from "./EpisodesAndLocation";
@@ -10,6 +10,10 @@ import NameAndStatus from "./NameAndStatus";
 
 function RandomCharacter(props) {
     const { character, episodes } = props;
+
+    function handleClick () {
+        console.log('iWORK');
+    }
 
     return(
         <Box className="character-container">
@@ -27,6 +31,14 @@ function RandomCharacter(props) {
                     <EpisodesAndLocation character={character} episodes={episodes} />
                 </CardContent>
             </Card>
+            
+            <Button 
+                variant="contained"
+                onClick={handleClick}
+                style={{fontSize: 25, fontWeight: 800, backgroundColor: 'rgb(220, 220, 220)', color: 'black'}}
+            >
+                RANDOMIZE
+            </Button>
         </Box>
     )
 

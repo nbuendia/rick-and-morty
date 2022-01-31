@@ -6,7 +6,6 @@ import Loading from "./Loading";
 import RandomCharacter from "./card/RandomCharacter";
 import Footer from "./Footer";
 
-
 function Home() {
     const [loading, setLoading] = useState(true);
     const [character, getCharacter] = useState(null);
@@ -19,7 +18,7 @@ function Home() {
             return res.data;
 
         }).then((res) => {
-            //CHOOSES A RANDOM NUMBER BETWEEN 0 AND TOTAL NUMBER OF CHARACTERS
+            //CHOOSES A RANDOM NUMBER BETWEEN 1 AND TOTAL NUMBER OF CHARACTERS
             let randomNum = Math.floor(Math.random() * res.info.count + 1);
             axios.get(`${URL}/${randomNum}`).then((res) => {
                 getCharacter(res.data)

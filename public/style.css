@@ -37,6 +37,12 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgb(79, 116, 24);
 }
 
+/* CENTERS DIV BUT HAS PROBLEMS WITH SCROLL */
+.center {
+  position: fixed;
+  top: calc(50% - 300px);
+}
+
 .loading-container {
   background-color: rgb(77, 72, 104);
   display: flex;
@@ -54,12 +60,6 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/* CENTERS DIV BUT HAS PROBLEMS WITH SCROLL */
-.center {
-  position: fixed;
-  top: calc(50% - 300px);
 }
 
 .card {

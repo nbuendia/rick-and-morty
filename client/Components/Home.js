@@ -24,7 +24,22 @@ function Home() {
         }).then((res) => {
             //CHOOSES A RANDOM NUMBER BETWEEN 1 AND TOTAL NUMBER OF CHARACTERS
             let randomNum = Math.floor(Math.random() * res.info.count + 1);
-            axios.get(`${URL}/${randomNum}`).then((res) => {
+            let today = new Date().toDateString();
+
+            //CHECK FOR DATE OR CHARACTER, IF ANY IS NULL ADD VALUES
+            if (!window.localStorage.getItem('date') || !window.localStorage.getItem('character')) {
+                window.localStorage.setItem('date', today);
+                window.localStorage.setItem('character', randomNum);
+            }
+
+            //CHECK FOR DATE VALUE IF IT EXISTS AND DONT MATCH
+            if (window.localStorage.getItem('date')) {
+                if (today !== window.localStorage.getItem('date')) window.localStorage.setItem('date', today);
+            }
+
+            let localStorageNum = window.localStorage.getItem('character');
+
+            axios.get(`${URL}/${localStorageNum}`).then((res) => {
                 getCharacter(res.data)
                 return res.data;
 

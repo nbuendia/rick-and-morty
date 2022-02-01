@@ -12,7 +12,8 @@ function RandomCharacter(props) {
     const { character, episodes } = props;
 
     function handleClick () {
-        console.log('iWORK');
+        window.localStorage.removeItem('character');
+        document.location.reload();
     }
 
     return(
@@ -35,7 +36,7 @@ function RandomCharacter(props) {
             <Button 
                 variant="contained"
                 onClick={handleClick}
-                style={{fontSize: 25, fontWeight: 800, backgroundColor: 'rgb(220, 220, 220)', color: 'black'}}
+                style={{fontSize: 25, fontWeight: 800, backgroundColor: 'rgb(220, 220, 220)', color: 'black', marginBottom: '25px'}}
             >
                 RANDOMIZE
             </Button>

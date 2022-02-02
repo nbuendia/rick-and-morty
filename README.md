@@ -11,7 +11,7 @@
 I'd like to give a shout out to the creators of The Rick & Morty API, they truly inspired me to create this project and I wouldnt be able to do this without them! If you're a fan of the show, I encourage you to look thorugh their API and support!
 
 <p align='center'>
-    <a target="_blank" rel="noopener" href="https://rickandmortyrandomizer.netlify.app/">
+    <a target="_blank" rel="noopener" href="https://rickandmortyapi.com/">
         <img src="https://img.shields.io/badge/Rick%20&%20Morty%20API-gray?style=for-the-badge">
     </a>
 </p>

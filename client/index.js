@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
-//TO IMPORT FILES ON DEPLOYED BUILD
+//TO IMPORT STYLES ON DEPLOYED BUILD
 import '../public/style.css';
-require('../public/rm-icon.png');
 
 //MUI
 import { createTheme, ThemeProvider } from "@mui/material";

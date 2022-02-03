@@ -18,7 +18,7 @@ I'd like to give a shout out to the creators of The Rick & Morty API, they truly
 
 ## Description
 
-This site displays one random character in the show a day, everyday. Charcters shouldn't change on page refresh or browser closure. If you dont like the character that was chosen, you can click on the 'Randomize' button and it'll choose another character at random for you.
+This site displays one random character in the show a day, everyday. Characters shouldn't change on page refresh or browser closure. If you don't like the character that was chosen, you can click on the 'Randomize' button and it'll choose another character at random for you.
 
 ## Where to view
 

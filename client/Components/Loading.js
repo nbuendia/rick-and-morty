@@ -12,8 +12,8 @@ function Loading() {
       <br />
       <img 
         src="https://media.giphy.com/media/n5GXsYKoe1F3eFcRgq/giphy.gif"
-        width="480"
-        height="360"
+        width="450"
+        height="330"
         frameBorder="0"
         allowFullScreen 
       />

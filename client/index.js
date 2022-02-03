@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 //TO IMPORT FILES ON DEPLOYED BUILD
 import '../public/style.css';
-import '../public/rm-icon.png';
+require('../public/rm-icon.png');
 
 //MUI
 import { createTheme, ThemeProvider } from "@mui/material";

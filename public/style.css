@@ -37,12 +37,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgb(79, 116, 24);
 }
 
-/* CENTERS DIV BUT HAS PROBLEMS WITH SCROLL */
-.center {
-  position: fixed;
-  top: calc(50% - 300px);
-}
-
 .loading-container {
   background-color: rgb(77, 72, 104);
   display: flex;
@@ -63,8 +57,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .card {
-  height: 300px;
-  width: 80%;
   margin: 25px;
   padding: 10px;
   display: flex;
@@ -72,8 +64,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .card-content {
-  width: 100%;
-  margin-left: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -92,9 +82,9 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: fixed;
   top: 0;
-  height: 250px;
 }
 
 .footer {
@@ -108,18 +98,21 @@ body::-webkit-scrollbar-thumb:hover {
   position: fixed;
   bottom: 0;
   top: auto;
-  height: 250px;
 }
 
-.inner-footer-box-1 {
+.inner-footer-box {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
-.inner-footer-box-2 {
+.icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .block-display {

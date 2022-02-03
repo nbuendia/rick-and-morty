@@ -39,7 +39,8 @@ Below is the link if you'd like to see and experience it yourself!
 
 **This project is still in development!** 
 Some of the features I hope to add will be,
-- Better styling for mobile viewing!
+- Better styling for mobile viewing
+- Add Favicon
 
 ## Social Media
 

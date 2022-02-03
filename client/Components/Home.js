@@ -64,11 +64,11 @@ function Home() {
 
     return(
         <>
-            <Container style={{height: '250px'}} />
+            <Container sx={{height: {xs: 100, sm: 125, md: 150, lg: 175}}}/>
             <TitleBar />
             <RandomCharacter character={character} episodes={episodes} />
             <Footer />
-            <Container style={{height: '250px'}} />
+            <Container sx={{height: {xs: 100, sm: 125, md: 150, lg: 175}}} />
         </>
     )
 

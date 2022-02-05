@@ -6,20 +6,13 @@ import Zoom from '@mui/material/Zoom';
 //MUI ICONS
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 function Footer() {
   const imgURL = 'https://i.imgur.com/JZXLbjV.png';
 
   return (
-    <Box className='footer' height={{xs: 100, sm: 125, md: 150, lg: 175}}>
-      <>
-        <a href="https://www.adultswim.com/streams/rick-and-morty" target='_blank' rel="noreferrer noopener">
-          <Typography className="link" fontSize={{xs: 35, sm: 45, md: 55, lg: 65}} color='black' style={{lineHeight: '1'}}>
-            Wanna watch some Rick & Morty?
-          </Typography>
-        </a>
-      </>
-      
+    <Box className='footer' >
       <Box className="inner-footer-box">
         <Box>
           <Typography fontSize={{xs: 25, sm: 30, md: 35}} marginRight={'5px'} style={{lineHeight: '1'}}>
@@ -47,7 +40,22 @@ function Footer() {
             </a>
           </Box>
         </Box>
+
+        <Box>
+          <Typography className="link" fontSize={{xs: 25, sm: 30, md: 35}} color='black' style={{lineHeight: '1'}}>
+            Watch R&M
+          </Typography>
+
+          <Tooltip title={<Typography fontSize={15}>On AdultSwim</Typography>} TransitionComponent={Zoom} placement="left">
+            <a href="https://www.adultswim.com/streams/rick-and-morty" target='_blank' rel="noreferrer noopener">
+              <Box>
+                <LiveTvIcon style={{color: 'black', fontSize: 35}} />
+              </Box>
+            </a>
+          </Tooltip>
+        </Box>
       </Box>
+
     </Box>
   );
 }

@@ -48,8 +48,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .character-container {
-  background-color: rgb(50, 65, 95);
-  width: 100%;
+  /* background-color: rgb(50, 65, 95); */
+  /* width: 100%; */
+  margin: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +72,7 @@ body::-webkit-scrollbar-thumb:hover {
 .inner-card-content {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .title-bar {
@@ -132,6 +133,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .hr {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
 }

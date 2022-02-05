@@ -48,8 +48,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .character-container {
-  /* background-color: rgb(50, 65, 95); */
-  /* width: 100%; */
   margin: 25px;
   display: flex;
   flex-direction: column;

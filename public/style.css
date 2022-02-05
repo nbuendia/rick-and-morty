@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .card {
-  margin: 25px;
+  margin-bottom: 25px;
   padding: 10px;
   display: flex;
   align-items: center;

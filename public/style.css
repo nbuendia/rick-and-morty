@@ -43,7 +43,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .character-container {
-  margin: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;

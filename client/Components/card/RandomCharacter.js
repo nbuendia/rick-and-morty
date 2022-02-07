@@ -27,6 +27,7 @@ function RandomCharacter(props) {
                 />
                 <CardContent className="card-content" sx={{width: {xs: 350, md: '100%'}}}>
                     <NameAndStatus character={character} />
+                    <br/>
                     <GenderAndSpecies character={character} />
                     <br/>
                     <EpisodesAndLocation character={character} episodes={episodes} />

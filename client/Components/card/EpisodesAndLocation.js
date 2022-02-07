@@ -37,12 +37,12 @@ function EpisodesAndLocation(props) {
     let featuredInSentence = stringConcatenation(episodeNames, seasonEpisodeNum);
 
     return(
-        <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} textAlign={'center'}>
-            <span className="block-display line-spacing-6 line-margin">
-                <b>LAST KNOWN LOCATION: </b> {character.location.name}
+        <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} textAlign={'center'} lineHeight={.6} padding={2}>
+            <span className="block-display line-margin">
+                <b>LAST KNOWN LOCATION:</b><br/> {character.location.name}
             </span>
-            <span className="block-display line-spacing-6">
-                <b>FEATURED IN: </b> {featuredInSentence}
+            <span className="block-display">
+                <b>FEATURED IN:</b><br/> {featuredInSentence}
             </span>
         </Typography>
     )

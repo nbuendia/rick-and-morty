@@ -18,7 +18,7 @@ function RandomCharacter(props) {
 
     return(
         <Box className="character-container">
-            <Card className='card' style={{backgroundColor: 'rgb(85, 110, 155)'}} sx={{flexDirection: {xs: 'column', md: 'row'}}}>
+            <Card className='card' style={{backgroundColor: 'rgb(85, 110, 155)'}} sx={{flexDirection: {xs: 'column', md: 'row'}, width: {xs: 350, md: 'calc(100% - 10vw)'}}}>
                 <CardMedia 
                     component='img'
                     image={character.image}

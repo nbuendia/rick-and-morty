@@ -10,8 +10,8 @@ function NameAndStatus(props) {
 
     return(
         <>
-            <Typography fontWeight={700} fontSize={65} color={'whiteSmoke'} textAlign={'center'}>
-                <span className="block-display line-spacing-5">
+            <Typography fontWeight={700} fontSize={65} color={'whiteSmoke'} textAlign={'center'} lineHeight={.6} padding={2}>
+                <span className="block-display">
                     {character.name}
                 </span>
                 <span className="block-display" style={{fontSize: 30, fontWeight: '300'}}>

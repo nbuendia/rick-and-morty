@@ -63,9 +63,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .inner-card-content {
-  height: 100%;
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .title-bar {
@@ -114,14 +114,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .block-display {
   display: block;
-}
-
-.line-spacing-5 {
-  line-height: 0.5;
-}
-
-.line-spacing-6 {
-  line-height: 0.6;
 }
 
 .line-margin {

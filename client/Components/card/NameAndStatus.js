@@ -9,28 +9,27 @@ function NameAndStatus(props) {
     const { character } = props;
 
     return(
-        <>
-            <Typography fontWeight={700} fontSize={65} color={'whiteSmoke'} textAlign={'center'} lineHeight={.6} padding={2}>
-                <span className="block-display">
-                    {character.name}
-                </span>
-                <span className="block-display" style={{fontSize: 30, fontWeight: '300'}}>
-                    {character.status === 'Alive' ? 
-                        <>
-                            <CircleIcon style={{fontSize: '10px', color: 'green'}} /> {character.status}
-                        </>
-                    : character.status === 'Dead' ? 
-                        <>
-                            <CircleIcon style={{fontSize: '10px', color: 'red'}} /> {character.status}
-                        </>
-                    : 
-                        <>
-                            <CircleIcon style={{fontSize: '10px'}} /> {character.status}
-                        </>
-                    }
-                </span>
-            </Typography>
-        </>
+        <Typography fontWeight={700} fontSize={65} color={'whiteSmoke'} textAlign={'center'} lineHeight={.6} padding={2}>
+            <span className="block-display">
+                {character.name}
+            </span>
+            
+            <span className="block-display" style={{fontSize: 30, fontWeight: '300'}}>
+                {character.status === 'Alive' ? 
+                    <>
+                        <CircleIcon style={{fontSize: '10px', color: 'green'}} /> {character.status}
+                    </>
+                : character.status === 'Dead' ? 
+                    <>
+                        <CircleIcon style={{fontSize: '10px', color: 'red'}} /> {character.status}
+                    </>
+                : 
+                    <>
+                        <CircleIcon style={{fontSize: '10px'}} /> {character.status}
+                    </>
+                }
+            </span>
+        </Typography>
     )
 
 }

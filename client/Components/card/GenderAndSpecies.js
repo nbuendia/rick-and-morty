@@ -8,13 +8,17 @@ function GenderAndSpecies(props) {
 
     return(
         <Box className="inner-card-content">
-        <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} lineHeight={.6}>
-            <b>GENDER:</b><br/> {character.gender}
-        </Typography>
-        <hr className="hr"/>
-        <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} lineHeight={.6}>
-            <b>SPECIES:</b><br/> {character.species}
-        </Typography>
+            <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} lineHeight={.6}>
+                <b>GENDER:</b><br/> 
+                {character.gender}
+            </Typography>
+
+            <hr className="hr"/>
+            
+            <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} lineHeight={.6}>
+                <b>SPECIES:</b><br/> 
+                {character.species}
+            </Typography>
         </Box>
     )
 

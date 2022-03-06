@@ -28,8 +28,8 @@ function Home() {
 
             //CHECK FOR DATE OR CHARACTER, IF ANY IS NULL ADD VALUES
             if (!window.localStorage.getItem('date') || !window.localStorage.getItem('character')) {
-                window.localStorage.setItem('date', today);
-                window.localStorage.setItem('character', randomNum);
+                if (!window.localStorage.getItem('date')) window.localStorage.setItem('date', today);
+                if (!window.localStorage.getItem('character')) window.localStorage.setItem('character', randomNum);
             }
 
             //CHECK FOR DATE VALUE IF IT EXISTS, CHECK WITH TODAYS DATE AND CORRECT IF VALUES DONT MATCH AND UPDATE CHARACTER

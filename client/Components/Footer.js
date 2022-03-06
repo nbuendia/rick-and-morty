@@ -48,9 +48,7 @@ function Footer() {
 
           <Tooltip title={<Typography fontSize={15}>On AdultSwim</Typography>} TransitionComponent={Zoom} placement="left">
             <a href="https://www.adultswim.com/streams/rick-and-morty" target='_blank' rel="noreferrer noopener">
-              <Box>
-                <LiveTvIcon style={{color: 'black', fontSize: 35}} />
-              </Box>
+              <LiveTvIcon style={{color: 'black', fontSize: 35}} />
             </a>
           </Tooltip>
         </Box>

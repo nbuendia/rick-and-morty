@@ -64,7 +64,7 @@ function Home() {
 
     return(
         <>
-            <Container sx={{height: {xs: 75, sm: 100, md: 125, lg: 150}}}/>
+            <Container sx={{height: {xs: 75, sm: 100, md: 125, lg: 150}}} />
             <TitleBar />
             <RandomCharacter character={character} episodes={episodes} />
             <Footer />

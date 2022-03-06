@@ -18,7 +18,7 @@ function Home() {
     const URL = 'https://rickandmortyapi.com/api/character';
 
     useEffect(() => {
-        axios.get(`${URL}`).then((res) => {
+        axios.get(URL).then((res) => {
             return res.data;
 
         }).then((res) => {
@@ -56,7 +56,7 @@ function Home() {
             })
         })
         .catch((error) => {
-            console.error('Oh No? Something Went Wrong!', error)
+            console.error('Oh No! Something Went Wrong!', error)
         })
     }, []);
 

@@ -25,8 +25,8 @@ function EpisodesAndLocation(props) {
             for (let i = 0; i < length; i++) {
                 featuredIn += `${nameArr[i]}: ${detailArr[i]}`;
 
-                //IF CHARACTER HAS MORE THAN 5 EPISODES IT ADDS COMMA B/W ALL WORDS ELSE B/W ALL WORDS EXCEPT LAST TWO
-                if (i < length && nameArr.length > 5) featuredIn += ', ';
+                //IF CHARACTER HAS MORE THAN 5 EPISODES IT ADDS COMMA TILL THE END ELSE B/W ALL WORDS EXCEPT LAST
+                if (nameArr.length > 5) featuredIn += ', ';
                 else if (i < length - 1) featuredIn += ', ';
             }
 
@@ -39,10 +39,13 @@ function EpisodesAndLocation(props) {
     return(
         <Typography fontWeight={300} fontSize={30} color={'whiteSmoke'} textAlign={'center'} lineHeight={.6} padding={2}>
             <span className="block-display line-margin">
-                <b>LAST KNOWN LOCATION:</b><br/> {character.location.name}
+                <b>LAST KNOWN LOCATION:</b><br/> 
+                {character.location.name}
             </span>
+
             <span className="block-display">
-                <b>FEATURED IN:</b><br/> {featuredInSentence}
+                <b>FEATURED IN:</b><br/> 
+                {featuredInSentence}
             </span>
         </Typography>
     )

@@ -12,7 +12,7 @@ function Footer() {
   const imgURL = 'https://i.imgur.com/JZXLbjV.png';
 
   return (
-    <Box className='footer' >
+    <Box className='footer'>
       <Box className="inner-footer-box">
         <Box>
           <Typography fontSize={{xs: 25, sm: 30, md: 35}} marginRight={'5px'} style={{lineHeight: '1'}}>
@@ -55,7 +55,6 @@ function Footer() {
           </Tooltip>
         </Box>
       </Box>
-
     </Box>
   );
 }

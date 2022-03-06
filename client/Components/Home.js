@@ -32,9 +32,12 @@ function Home() {
                 window.localStorage.setItem('character', randomNum);
             }
 
-            //CHECK FOR DATE VALUE IF IT EXISTS AND DONT MATCH
+            //CHECK FOR DATE VALUE IF IT EXISTS, CHECK WITH TODAYS DATE AND CORRECT IF VALUES DONT MATCH AND UPDATE CHARACTER
             if (window.localStorage.getItem('date')) {
-                if (today !== window.localStorage.getItem('date')) window.localStorage.setItem('date', today);
+                if (today !== window.localStorage.getItem('date')) {
+                    window.localStorage.setItem('date', today);
+                    window.localStorage.setItem('character', randomNum);
+                }
             }
 
             let localStorageNum = window.localStorage.getItem('character');

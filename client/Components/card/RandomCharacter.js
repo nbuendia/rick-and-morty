@@ -8,7 +8,11 @@ import EpisodesAndLocation from "./EpisodesAndLocation";
 import GenderAndSpecies from "./GenderAndSpecies";
 import NameAndStatus from "./NameAndStatus";
 
+//HOOKS
+import useLocalStorage from "../../Hooks/useLocalStorage";
+
 function RandomCharacter(props) {
+    const [removeCharacter] = useLocalStorage();
     const { character, episodes } = props;
 
     function handleClick () {
@@ -37,7 +41,7 @@ function RandomCharacter(props) {
             
             <Button 
                 variant="contained"
-                onClick={handleClick}
+                onClick={removeCharacter}
                 style={{fontSize: 25, fontWeight: 800, backgroundColor: 'rgb(220, 220, 220)', color: 'black', marginBottom: '25px'}}
             >
                 RANDOMIZE

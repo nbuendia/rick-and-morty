@@ -10,10 +10,14 @@ import RandomCharacter from "./card/RandomCharacter";
 import Footer from "./Footer";
 import TitleBar from "./TitleBar";
 
+//HOOKS
+import useLocalStorage from "../Hooks/useLocalStorage";
+
 function Home() {
     const [loading, setLoading] = useState(true);
     const [character, getCharacter] = useState(null);
     const [episodes, getEpisodes] = useState(null);
+    // const [date, characterNumber] = useLocalStorage(null);
     
     const URL = 'https://rickandmortyapi.com/api/character';
 

@@ -16,7 +16,8 @@ function RandomCharacter(props) {
     const { character, episodes } = props;
 
     function handleClick () {
-        window.localStorage.removeItem('character');
+        // window.localStorage.removeItem('character');
+        removeCharacter();
         document.location.reload();
     }
 
@@ -41,7 +42,7 @@ function RandomCharacter(props) {
             
             <Button 
                 variant="contained"
-                onClick={removeCharacter}
+                onClick={handleClick}
                 style={{fontSize: 25, fontWeight: 800, backgroundColor: 'rgb(220, 220, 220)', color: 'black', marginBottom: '25px'}}
             >
                 RANDOMIZE

@@ -17,7 +17,21 @@ function Home() {
     const [loading, setLoading] = useState(true);
     const [character, getCharacter] = useState(null);
     const [episodes, getEpisodes] = useState(null);
-    // const [date, characterNumber] = useLocalStorage(null);
+    const [getActiveCharacter, getCurrentDate, setCharacter, setDate] = useLocalStorage();
+
+    const setLocalStorageValues = (character, date) => {
+        const currentDate = getCurrentDate();
+        const activeCharacter = getActiveCharacter();
+
+        if (!activeCharacter) setCharacter(character);
+        if (!currentDate) setDate(date);
+    };
+
+    const updateDate = (date) => {
+        let today = new Date().toDateString();
+        const currentDate = getCurrentDate();
+        if (currentDate && currentDate !== today) setDate(date);
+    };
     
     const URL = 'https://rickandmortyapi.com/api/character';
 
@@ -31,12 +45,14 @@ function Home() {
             let today = new Date().toDateString();
 
             //CHECK FOR DATE OR CHARACTER, IF ANY IS NULL ADD VALUES
+            // setLocalStorageValues(randomNum, today);
             if (!window.localStorage.getItem('date') || !window.localStorage.getItem('character')) {
                 if (!window.localStorage.getItem('date')) window.localStorage.setItem('date', today);
                 if (!window.localStorage.getItem('character')) window.localStorage.setItem('character', randomNum);
             }
 
             //CHECK FOR DATE VALUE IF IT EXISTS, CHECK WITH TODAYS DATE AND CORRECT IF VALUES DONT MATCH AND UPDATE CHARACTER
+            // updateDate(today);
             if (window.localStorage.getItem('date')) {
                 if (today !== window.localStorage.getItem('date')) {
                     window.localStorage.setItem('date', today);

@@ -11,28 +11,14 @@ import Footer from "./Footer";
 import TitleBar from "./TitleBar";
 
 //HOOKS
-import useLocalStorage from "../Hooks/useLocalStorage";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function Home() {
     const [loading, setLoading] = useState(true);
     const [character, getCharacter] = useState(null);
     const [episodes, getEpisodes] = useState(null);
-    const [getActiveCharacter, getCurrentDate, setCharacter, setDate] = useLocalStorage();
+    const [setLocalStorageValues, updateLocalStorageValues, getLocalStorageCharacter] = useLocalStorage();
 
-    const setLocalStorageValues = (character, date) => {
-        const currentDate = getCurrentDate();
-        const activeCharacter = getActiveCharacter();
-
-        if (!activeCharacter) setCharacter(character);
-        if (!currentDate) setDate(date);
-    };
-
-    const updateDate = (date) => {
-        let today = new Date().toDateString();
-        const currentDate = getCurrentDate();
-        if (currentDate && currentDate !== today) setDate(date);
-    };
-    
     const URL = 'https://rickandmortyapi.com/api/character';
 
     useEffect(() => {
@@ -45,24 +31,13 @@ function Home() {
             let today = new Date().toDateString();
 
             //CHECK FOR DATE OR CHARACTER, IF ANY IS NULL ADD VALUES
-            // setLocalStorageValues(randomNum, today);
-            if (!window.localStorage.getItem('date') || !window.localStorage.getItem('character')) {
-                if (!window.localStorage.getItem('date')) window.localStorage.setItem('date', today);
-                if (!window.localStorage.getItem('character')) window.localStorage.setItem('character', randomNum);
-            }
+            setLocalStorageValues(randomNum, today);
 
             //CHECK FOR DATE VALUE IF IT EXISTS, CHECK WITH TODAYS DATE AND CORRECT IF VALUES DONT MATCH AND UPDATE CHARACTER
-            // updateDate(today);
-            if (window.localStorage.getItem('date')) {
-                if (today !== window.localStorage.getItem('date')) {
-                    window.localStorage.setItem('date', today);
-                    window.localStorage.setItem('character', randomNum);
-                }
-            }
+            updateLocalStorageValues(randomNum, today);
+            let characterNumber = getLocalStorageCharacter();
 
-            let localStorageNum = window.localStorage.getItem('character');
-
-            axios.get(`${URL}/${localStorageNum}`).then((res) => {
+            axios.get(`${URL}/${characterNumber}`).then((res) => {
                 getCharacter(res.data)
                 return res.data;
 
@@ -98,3 +73,19 @@ function Home() {
 }
 
 export default Home;
+
+// // CHECK FOR DATE OR CHARACTER, IF ANY IS NULL ADD VALUES            
+// if (!window.localStorage.getItem('date') || !window.localStorage.getItem('character')) {
+//     if (!window.localStorage.getItem('date')) window.localStorage.setItem('date', today);
+//     if (!window.localStorage.getItem('character')) window.localStorage.setItem('character', randomNum);
+// }
+
+// // CHECK FOR DATE VALUE IF IT EXISTS, CHECK WITH TODAYS DATE AND CORRECT IF VALUES DONT MATCH AND UPDATE CHARACTER
+// if (window.localStorage.getItem('date')) {
+//     if (today !== window.localStorage.getItem('date')) {
+//         window.localStorage.setItem('date', today);
+//         window.localStorage.setItem('character', randomNum);
+//     }
+// }
+
+// let localStorageNum = window.localStorage.getItem('character');

@@ -9,15 +9,13 @@ import GenderAndSpecies from "./GenderAndSpecies";
 import NameAndStatus from "./NameAndStatus";
 
 //HOOKS
-import useLocalStorage from "../../Hooks/useLocalStorage";
+import { removeLocalStorageCharacter } from "../hooks/useLocalStorage";
 
 function RandomCharacter(props) {
-    const [removeCharacter] = useLocalStorage();
     const { character, episodes } = props;
 
     function handleClick () {
-        // window.localStorage.removeItem('character');
-        removeCharacter();
+        removeLocalStorageCharacter();
         document.location.reload();
     }
 
